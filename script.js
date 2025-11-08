@@ -98,7 +98,7 @@ new Chart(ctx2, {
 	}
 });
 
-// Savings Allocation Doughnut
+// Savings Allocation
 const ctx3El = document.getElementById('savingsAllocationChart');
 if (ctx3El) {
 	const ctx3 = ctx3El.getContext('2d');

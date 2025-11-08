@@ -729,7 +729,7 @@
             color: #dc2626;
         }
 
-        /* Savings allocation chart & legend */
+        /* Savings allocation */
         .savings-legend {
             display: flex;
             flex-direction: column;
@@ -755,12 +755,16 @@
             vertical-align: middle;
         }
 
-        /* Legend dot color modifiers */
-        .legend-dot.green { background: #6ec531; }
-        .legend-dot.blue  { background: #2196f3; }
-        .legend-dot.purple{ background: #9c27b0; }
+        .legend-dot.green {
+            background: #6ec531;
+        }
+        .legend-dot.blue  {
+            background: #2196f3;
+        }
+        .legend-dot.purple{
+            background: #9c27b0;
+        }
 
-        /* Prediction boxes grid */
         .prediction-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -768,39 +772,102 @@
             margin-top: 1rem;
         }
 
-        /* Prediction box variants */
-        .prediction-box.blue { background: #e3f2fd; border-left-color: #2196f3; }
-        .prediction-box.orange { background: #fff3e0; border-left-color: #f57c00; }
-        .prediction-box .prediction-title { margin-bottom: 0.4rem; font-size: 0.9rem; }
-        .prediction-box.blue .prediction-title { color: #1565c0; }
-        .prediction-box.blue .value { color: #1565c0; }
-        .prediction-box.orange .prediction-title { color: #e65100; }
+        /* Prediction box */
+        .prediction-box.blue {
+            background: #e3f2fd;
+            border-left-color: #2196f3;
+        }
+        .prediction-box.orange {
+            background: #fff3e0;
+            border-left-color: #f57c00;
+        }
+        .prediction-box .prediction-title {
+            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+        }
+        .prediction-box.blue .prediction-title {
+            color: #1565c0;
+        }
+        .prediction-box.blue .value {
+            color: #1565c0;
+        }
+        .prediction-box.orange .prediction-title {
+            color: #e65100;
+        }
         .prediction-box.orange .value { color: #e65100; }
 
-        /* utility color for value */
-        .value.green { color: #6ec531; }
+        .value.green {
+            color: #6ec531;
+        }
 
-        /* progress fill width helper */
-        .progress-fill.w-66-7 { width: 66.7%; }
+        /* progress fill width */
+        .progress-fill.w-66-7 {
+            width: 66.7%;
+        }
 
-        /* Savings allocation layout helpers */
-        .savings-grid { display: grid; grid-template-columns: 160px 1fr; gap: 1rem; align-items: center; margin-bottom: 1rem; }
-        .savings-chart-wrapper { width:160px; height:160px; display:flex; align-items:center; justify-content:center; }
-        .savings-header-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; }
-        .meta-label { font-size:0.85rem; color:#666; }
-        .meta-value { font-size:1.1rem; font-weight:600; }
-        .meta-value.large { font-size:1.3rem; font-weight:bold; }
-        .meta-value.accent { color: #6ec531; }
-        .text-right { text-align: right; }
-        .legend-amount { font-weight:700; }
+        /* Savings allocation helpers */
+        .savings-grid {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .savings-chart-wrapper {
+            width:160px;
+            height:160px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .savings-header-row {
+            display:flex;
+            justify-content:space-between;
+            align-items:center; 
+            margin-bottom:0.5rem;
+        }
+        .meta-label {
+            font-size:0.85rem;
+            color:#666;
+        }
+        .meta-value {
+            font-size:1.1rem;
+            font-weight:600;
+        }
+        .meta-value.large {
+            font-size:1.3rem;
+            font-weight:bold;
+        }
+        .meta-value.accent {
+            color: #6ec531;
+        }
+        .text-right { 
+            text-align: right;
+        }
+        .legend-amount {
+            font-weight:700;
+        }
 
     /* Allocation helpers */
-    .est-month { color: #6ec531; }
-    .allocation-progress-fill.w-50 { width: 50%; }
-    .allocation-progress-fill.w-30 { width: 30%; }
-    .allocation-progress-fill.w-10 { width: 10%; }
+    .est-month {
+        color: #6ec531;
+    }
+    .allocation-progress-fill.w-50 {
+        width: 50%;
+    }
+    .allocation-progress-fill.w-30 {
+        width: 30%;
+    }
+    .allocation-progress-fill.w-10 {
+        width: 10%;
+    }
 
-    /* Reusable grid for 4 metrics */
-    .four-metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+    /* Grid for metrics */
+    .four-metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
 
 

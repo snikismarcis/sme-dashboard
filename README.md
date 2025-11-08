@@ -51,7 +51,7 @@ Compare predicted cash flow with factual values. Display prediction confidence, 
 **Info** there should always be information about *long-term deposits* ahead of time, more on them later.
 
 * Days protected - show how many days the system has managed to keep cash base above minium, while investing surplus money and meeting SME's outflow needs.
-* Optimization rate - [TODO] since it requires a calculation for near perfect money flow.
+* Optimization rate - [TODO] requires a calculation for near perfect money flow.
 * Average surplus
 * Upcoming obligations - user-set timestamps, historically analysed and predicted dates for payments like: payroll, rent, other expenses.
 
