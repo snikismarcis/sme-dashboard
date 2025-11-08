@@ -1,0 +1,730 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Roboto, Arial, sans-serif;
+            background: #f5f7fa;
+            color: #2c3e50;
+        }
+
+        .header {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            background: #6ec531;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .app-name {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app-name .title {
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .app-name .subtitle {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #666;
+            font-size: 0.95rem;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav a.active {
+            color: #6ec531;
+            border-bottom-color: #6ec531;
+        }
+
+        .user-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .ai-assistant-btn {
+            background: #6ec531;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .user-avatar {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: #6ec531;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .page-header {
+            margin-bottom: 2rem;
+        }
+
+        .page-header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-header p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .metric-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .metric-card .icon {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .metric-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-change {
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .metric-change.positive {
+            color: #6ec531;
+        }
+
+        .metric-change.negative {
+            color: #e74c3c;
+        }
+
+        .chart-section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+        }
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .chart-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .chart-legend {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.85rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .prediction-box {
+            background: #e8f5e9;
+            border-left: 4px solid #6ec531;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 4px;
+        }
+
+        .prediction-box h4 {
+            font-size: 0.9rem;
+            color: #2e7d32;
+            margin-bottom: 0.5rem;
+        }
+
+        .prediction-box .value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+
+        .prediction-box .date {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .two-column-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .section-subtitle {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .limit-display {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .limit-box {
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .limit-box .label {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 0.3rem;
+        }
+
+        .limit-box .value {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .limit-box .note {
+            font-size: 0.75rem;
+            color: #666;
+            margin-top: 0.3rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #2c3e50;
+            transition: width 0.3s ease;
+        }
+
+        .progress-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .automated-action {
+            background: #e8f5e9;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .automated-action .icon {
+            color: #6ec531;
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+        }
+
+        .automated-action p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .metrics-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .metric-box {
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .metric-box .label {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-box .value {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .metric-box .value.green {
+            color: #6ec531;
+        }
+
+        .allocation-item {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .allocation-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+
+        .allocation-title {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+        }
+
+        .allocation-apy {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .allocation-subtitle {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 0.8rem;
+        }
+
+        .allocation-details {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .allocation-progress {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .allocation-progress-bar {
+            flex: 1;
+            height: 6px;
+            background: #e9ecef;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .allocation-progress-fill {
+            height: 100%;
+            background: #2c3e50;
+        }
+
+        .liquidity-badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .liquidity-badge.instant {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .liquidity-badge.one-day {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .liquidity-badge.thirty-days {
+            background: #f3e5f5;
+            color: #6a1b9a;
+        }
+
+        .tip-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .tip-box .icon {
+            color: #2196f3;
+        }
+
+        .tip-box p {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: #1565c0;
+        }
+
+        .rebalance-btn {
+            width: 100%;
+            background: #6ec531;
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        .log-section {
+            background: #1e2a3a;
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+
+        .log-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .log-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .manual-override-btn {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        .log-item {
+            background: #2a3847;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .log-content {
+            flex: 1;
+        }
+
+        .log-action {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .log-meta {
+            font-size: 0.8rem;
+            color: #9ca3af;
+        }
+
+        .log-amount {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .log-amount.positive {
+            color: #6ec531;
+        }
+
+        .log-amount.negative {
+            color: #f59e0b;
+        }
+
+        .log-status {
+            font-size: 0.75rem;
+            color: #6ec531;
+        }
+
+        .log-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #374151;
+            font-size: 0.9rem;
+        }
+
+        .comparison-section {
+            background: #1e2a3a;
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+
+        .comparison-bars {
+            margin: 1.5rem 0;
+        }
+
+        .bar-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .bar-label {
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .bar-container {
+            position: relative;
+            height: 30px;
+        }
+
+        .bar {
+            position: absolute;
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .bar.user {
+            background: #6ec531;
+            z-index: 2;
+        }
+
+        .bar.peer {
+            background: #64748b;
+            z-index: 1;
+        }
+
+        .insights-list {
+            margin-top: 1.5rem;
+        }
+
+        .insights-list h4 {
+            font-size: 0.9rem;
+            color: #6ec531;
+            margin-bottom: 1rem;
+        }
+
+        .insight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.8rem;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        .insight-dot {
+            width: 8px;
+            height: 8px;
+            background: #6ec531;
+            border-radius: 50%;
+            margin-top: 0.4rem;
+            flex-shrink: 0;
+        }
+
+        /* Upcoming Obligations */
+        .upcoming-obligations {
+            margin-top: 1rem;
+            border-top: 1px solid #e9ecef;
+            padding-top: 1rem;
+        }
+
+        .upcoming-obligations-header {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #2c3e50;
+        }
+
+        .obligation-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f1f3f5;
+        }
+
+        .obligation-left {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .obligation-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+
+        .obligation-icon.vendor {
+            background: #fee2e2;
+            color: #dc2626;
+        }
+
+        .obligation-icon.utilities {
+            background: #dbeafe;
+            color: #2563eb;
+        }
+
+        .obligation-icon.payroll {
+            background: #d1fae5;
+            color: #059669;
+        }
+
+        .obligation-icon.rent {
+            background: #fef3c7;
+            color: #d97706;
+        }
+
+        .obligation-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .obligation-title {
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .obligation-date {
+            font-size: 0.75rem;
+            color: #6b7280;
+        }
+
+        .obligation-amount {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #dc2626;
+        }
+
+        .total-obligations {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .total-obligations-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .total-obligations-amount {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #dc2626;
+        }

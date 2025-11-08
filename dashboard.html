@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEB Cash Flow Manager</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo-section">
+            <img class="logo" src="SebLogo.svg" alt="SEB Logo"/>
+            <div class="app-name">
+                <div class="title">SEB</div>
+                <div class="subtitle">Cash Flow Manager</div>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="#" class="active">Dashboard</a>
+            <a href="#">Predictions</a>
+            <a href="#">Analytics</a>
+            <a href="#">Reports</a>
+        </nav>
+        <div class="user-section">
+            <button class="ai-assistant-btn">AI Chat</button>
+            <div class="user-avatar">SO</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Dashboard Grid Layout -->
+        <div class="dashboard-grid">
+            <!-- Left Column -->
+            <div>
+                <!-- Metrics Cards -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="icon">💵</div>
+                        <div class="metric-label">Current Balance</div>
+                        <div class="metric-value">$150,000</div>
+                        <div class="metric-change positive">
+                            ↗ +12% from last month
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="icon">📊</div>
+                        <div class="metric-label">Predicted Cash Flow (7 Days)</div>
+                        <div class="metric-value">+$20,000</div>
+                        <div class="metric-change positive">
+                            ↗ +8% based on recent data analysis
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="icon">🔄</div>
+                        <div class="metric-label">Surplus Transferred</div>
+                        <div class="metric-value">$10,000</div>
+                        <div class="metric-change positive">
+                            ↗ +4% overnight deposit
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="icon">💰</div>
+                        <div class="metric-label">Benefits Earned</div>
+                        <div class="metric-value">$1,200</div>
+                        <div class="metric-change positive">
+                            ↗ +22% from interest this month
+                        </div>
+                    </div>
+                </div>
+
+        <!-- Cash Flow Predictions Chart -->
+        <div class="chart-section">
+            <div class="chart-header">
+                <div>
+                    <div class="chart-title">Cash Flow Monitoring</div>
+                </div>
+                <div class="chart-legend">
+                    <div class="legend-item">
+                        <div class="legend-dot" style="background: #6ec531;"></div>
+                        <span>Live Cash Flow</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot" style="background: #2196f3;"></div>
+                        <span>Expected Cash Flow</span>
+                    </div>
+                </div>
+            </div>
+            <canvas id="cashFlowChart" height="80"></canvas>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+                <div class="prediction-box">
+                    <h4>↗ Predicted Surplus</h4>
+                    <div class="value">$15,000</div>
+                    <div class="date">Expected Dec 2</div>
+                </div>
+                <div class="prediction-box" style="background: #e3f2fd; border-left-color: #2196f3;">
+                    <h4 style="color: #1565c0;">📊 Avg Daily Inflow</h4>
+                    <div class="value" style="color: #1565c0;">$4,200</div>
+                    <div class="date">Last 6 months</div>
+                </div>
+                <div class="prediction-box" style="background: #fff3e0; border-left-color: #f57c00;">
+                    <h4 style="color: #e65100;">🎯 Prediction Confidence</h4>
+                    <div class="value" style="color: #e65100;">94.5%</div>
+                    <div class="date">Based on history</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Two Column Layout -->
+        <div class="two-column-grid">
+            <!-- Base Liquidity Protection -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-title">Base Liquidity Protection</div>
+                </div>
+                <div class="section-subtitle">Maintain minimum balance for operations</div>
+
+                <div class="limit-display">
+                    <div class="limit-box">
+                        <div class="label">🛡️ Base Limit</div>
+                        <div class="value">$100,000</div>
+                        <div class="note">Always protected</div>
+                    </div>
+                    <div class="limit-box">
+                        <div class="label">↗ Available Surplus</div>
+                        <div class="value" style="color: #6ec531;">$50,000</div>
+                        <div class="note">For optimization</div>
+                    </div>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 66.7%;"></div>
+                </div>
+                <div class="progress-labels">
+                    <span>Base: $100,000</span>
+                    <span>Current: $150,000</span>
+                </div>
+
+                <div class="automated-action">
+                    <span class="icon">ℹ️</span>
+                    <strong>Next Automated Action</strong>
+                    <p>After Nov 15 payroll ($25,000), predicted surplus of $25,000 will be transferred to Long-term Savings (1.2% APY) to maximize returns.</p>
+                </div>
+
+                <div class="metrics-row">
+                    <div class="metric-box">
+                        <div class="label">Days Protected</div>
+                        <div class="value">45</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="label">Optimization Rate</div>
+                        <div class="value green">98%</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="label">Avg Surplus</div>
+                        <div class="value">$47K</div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Obligations -->
+                <div class="upcoming-obligations">
+                    <div class="upcoming-obligations-header">Upcoming Obligations</div>
+                    
+                    <div class="obligation-item">
+                        <div class="obligation-left">
+                            <div class="obligation-icon vendor">📦</div>
+                            <div class="obligation-info">
+                                <div class="obligation-title">Vendor Payment - Equipment</div>
+                                <div class="obligation-date">Nov 10</div>
+                            </div>
+                        </div>
+                        <div class="obligation-amount">-$6,000</div>
+                    </div>
+
+                    <div class="obligation-item">
+                        <div class="obligation-left">
+                            <div class="obligation-icon utilities">⚡</div>
+                            <div class="obligation-info">
+                                <div class="obligation-title">Utilities & Internet</div>
+                                <div class="obligation-date">Nov 12</div>
+                            </div>
+                        </div>
+                        <div class="obligation-amount">-$1,200</div>
+                    </div>
+
+                    <div class="obligation-item">
+                        <div class="obligation-left">
+                            <div class="obligation-icon payroll">👥</div>
+                            <div class="obligation-info">
+                                <div class="obligation-title">Monthly Payroll</div>
+                                <div class="obligation-date">Nov 15</div>
+                            </div>
+                        </div>
+                        <div class="obligation-amount">-$25,000</div>
+                    </div>
+
+                    <div class="obligation-item">
+                        <div class="obligation-left">
+                            <div class="obligation-icon rent">🏢</div>
+                            <div class="obligation-info">
+                                <div class="obligation-title">Office Rent Payment</div>
+                                <div class="obligation-date">Nov 20</div>
+                            </div>
+                        </div>
+                        <div class="obligation-amount">-$6,500</div>
+                    </div>
+
+                    <div class="total-obligations">
+                        <div class="total-obligations-label">Total Next 30 Days</div>
+                        <div class="total-obligations-amount">$72,700</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEB Savings Allocation -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-title">SEB Savings Allocation</div>
+                </div>
+                <div class="section-subtitle">Optimized distribution across account types</div>
+
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 0.8rem; color: #666;">Total Allocated</div>
+                        <div style="font-size: 1.3rem; font-weight: bold;">$50,000</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 0.8rem; color: #666;">Weighted APY</div>
+                        <div style="font-size: 1.3rem; font-weight: bold; color: #6ec531;">0.73%</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 0.8rem; color: #666;">Est. Monthly</div>
+                        <div style="font-size: 1.3rem; font-weight: bold; color: #6ec531;">$30</div>
+                    </div>
+                </div>
+
+                <!-- Overnight Deposit -->
+                <div class="allocation-item">
+                    <div class="allocation-header">
+                        <div class="allocation-title">
+                            <span>⚡</span>
+                            <span>Overnight Deposit</span>
+                        </div>
+                        <div class="allocation-apy">0.5% APY</div>
+                    </div>
+                    <div class="allocation-subtitle">Instant access, lowest returns</div>
+                    <div class="allocation-details">
+                        <div>
+                            <strong>Allocated:</strong> $25,000
+                        </div>
+                        <div>
+                            <strong>Monthly Est:</strong> <span style="color: #6ec531;">+$10.42</span>
+                        </div>
+                        <div>
+                            <span class="liquidity-badge instant">instant</span>
+                        </div>
+                    </div>
+                    <div class="allocation-progress">
+                        <span>Utilization: 50%</span>
+                        <div class="allocation-progress-bar">
+                            <div class="allocation-progress-fill" style="width: 50%;"></div>
+                        </div>
+                        <span>Max: $50,000</span>
+                    </div>
+                </div>
+
+                <!-- Regular Savings -->
+                <div class="allocation-item">
+                    <div class="allocation-header">
+                        <div class="allocation-title">
+                            <span>⏱️</span>
+                            <span>Regular Savings</span>
+                        </div>
+                        <div class="allocation-apy">0.8% APY</div>
+                    </div>
+                    <div class="allocation-subtitle">1 business day notice</div>
+                    <div class="allocation-details">
+                        <div>
+                            <strong>Allocated:</strong> $15,000
+                        </div>
+                        <div>
+                            <strong>Monthly Est:</strong> <span style="color: #6ec531;">+$10.00</span>
+                        </div>
+                        <div>
+                            <span class="liquidity-badge one-day">1-day</span>
+                        </div>
+                    </div>
+                    <div class="allocation-progress">
+                        <span>Utilization: 30%</span>
+                        <div class="allocation-progress-bar">
+                            <div class="allocation-progress-fill" style="width: 30%;"></div>
+                        </div>
+                        <span>Max: $50,000</span>
+                    </div>
+                </div>
+
+                <!-- Long-term Deposit -->
+                <div class="allocation-item">
+                    <div class="allocation-header">
+                        <div class="allocation-title">
+                            <span>📅</span>
+                            <span>Long-term Deposit</span>
+                        </div>
+                        <div class="allocation-apy">1.2% APY</div>
+                    </div>
+                    <div class="allocation-subtitle">30-day notice, highest returns</div>
+                    <div class="allocation-details">
+                        <div>
+                            <strong>Allocated:</strong> $10,000
+                        </div>
+                        <div>
+                            <strong>Monthly Est:</strong> <span style="color: #6ec531;">+$10.00</span>
+                        </div>
+                        <div>
+                            <span class="liquidity-badge thirty-days">30-days</span>
+                        </div>
+                    </div>
+                    <div class="allocation-progress">
+                        <span>Utilization: 10%</span>
+                        <div class="allocation-progress-bar">
+                            <div class="allocation-progress-fill" style="width: 10%;"></div>
+                        </div>
+                        <span>Max: $100,000</span>
+                    </div>
+                </div>
+
+                <div class="tip-box">
+                    <span class="icon">💡</span>
+                    <strong>AI Optimization Tip</strong>
+                    <p>Based on your 45-day cash flow prediction, you can safely move an additional $5,000 to Long-term Deposit to increase APY from 0.73% to 0.88%, earning an extra $6.25/month.</p>
+                </div>
+
+                <button class="rebalance-btn">Rebalance Allocation</button>
+            </div>
+        </div>
+
+        <!-- Returns Analysis -->
+        <div class="chart-section">
+            <div class="chart-header">
+                <div class="chart-title">Returns Analysis</div>
+                <div class="section-subtitle">Performance</div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                <div class="metric-box">
+                    <div class="label">Total Earned (6mo)</div>
+                    <div class="value green">$3,110</div>
+                </div>
+                <div class="metric-box">
+                    <div class="label">Avg Monthly</div>
+                    <div class="value">$518</div>
+                </div>
+                <div class="metric-box">
+                    <div class="label">Growth Rate</div>
+                    <div class="value green">↗ 71.1%</div>
+                </div>
+                <div class="metric-box">
+                    <div class="label">Projected Annual</div>
+                    <div class="value">$6220</div>
+                </div>
+            </div>
+            <canvas id="returnsChart" height="60"></canvas>
+        </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
