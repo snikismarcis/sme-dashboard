@@ -211,7 +211,6 @@
 
         .prediction-box {
             background: #e8f5e9;
-            border-left: 4px solid #6ec531;
             padding: 1rem;
             margin-top: 1rem;
             border-radius: 4px;
@@ -450,7 +449,6 @@
 
         .tip-box {
             background: #e3f2fd;
-            border-left: 4px solid #2196f3;
             padding: 1rem;
             margin: 1rem 0;
             border-radius: 4px;
@@ -789,11 +787,9 @@
         /* Prediction box */
         .prediction-box.blue {
             background: #e3f2fd;
-            border-left-color: #2196f3;
         }
         .prediction-box.orange {
             background: #fff3e0;
-            border-left-color: #f57c00;
         }
         .prediction-box .prediction-title {
             margin-bottom: 0.4rem;
