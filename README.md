@@ -1,5 +1,5 @@
 
-# Take one at SME dashboard
+# SME dashboard
 
 Design for this dashboard is just a potential features sketch really.
 Here is the current checklist for features displayed, to-be displayed:
