@@ -98,3 +98,32 @@ new Chart(ctx2, {
 	}
 });
 
+// Savings Allocation Doughnut
+const ctx3El = document.getElementById('savingsAllocationChart');
+if (ctx3El) {
+	const ctx3 = ctx3El.getContext('2d');
+	new Chart(ctx3, {
+		type: 'doughnut',
+		data: {
+			labels: ['Overnight', 'Regular', 'Long-term'],
+			datasets: [{
+				data: [25000, 15000, 10000],
+				backgroundColor: ['#6ec531', '#2196f3', '#9c27b0'],
+				hoverOffset: 6,
+				borderWidth: 0
+			}]
+		},
+		options: {
+			responsive: true,
+			maintainAspectRatio: false,
+			cutout: '65%',
+			plugins: {
+				legend: { display: false }
+			},
+			elements: {
+				arc: { borderRadius: 4 }
+			}
+		}
+	});
+}
+

@@ -67,4 +67,4 @@ Show how surplus cash is distributed across different saving account types.
 
 ## Return analysis
 
-Show earning benefits over time, by breaking down performance. 
+Show earning benefits over time by breaking down performance. 
