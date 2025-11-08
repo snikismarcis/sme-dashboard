@@ -479,6 +479,20 @@
             margin-top: 1rem;
         }
 
+        .update-btn {
+            width: 100%;
+            background: #6ec531;
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        
+
         .log-section {
             background: #1e2a3a;
             color: white;
