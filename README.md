@@ -1,9 +1,8 @@
 
 # Take one at SME dashboard
 
-Since there is not yet a semi-clear solution for our problem this is a mock version.
-Design for this dashboard is just for feature mockup, final SME dashboard is to be made compact.
-Here is the current checklist for features implemented, to-be implemented:
+Design for this dashboard is just a potential features sketch really.
+Here is the current checklist for features displayed, to-be displayed:
 * Header
 * Monitoring cards
 * Cash Flow monitoring chart
